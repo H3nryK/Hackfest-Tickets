@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackfest Ticket</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      animation: bgAnimation 20s linear infinite alternate;
+    }
+
+    @keyframes bgAnimation {
+      0% {
+        background-color: #fff;
+      }
+      50% {
+        background-color: #ff6b6b;
+      }
+      100% {
+        background-color: #ffa500;
+      }
+    }
+
+    h1 {
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .qr-code {
+      margin-top: 20px;
+    }
+
+    .qr-code img {
+        height: 100px;
+    }
+
+    .ticket-info {
+      margin-top: 20px;
+      color: #333;
+    }
+
+    .note {
+      margin-top: 20px;
+      color: #666;
+    }
+
+    /* Custom Animation */
+    .container img {
+      animation: rotate 5s linear infinite;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-4 mb-5">Hackfest Ticket</h1>
+    <!-- QR Code Image -->
+    <div class="qr-code">
+      <img src="/media/qrcodes/{{ ticket.id }}.png" alt="QR Code" class="img-fluid">
+    </div>
+    <!-- Ticket Information -->
+    <div class="ticket-info mt-5">
+      <p class="mb-2">Event: Hackfest 2024</p>
+      <p class="mb-2">Date: October 14, 2024</p>
+      <p class="mb-2">Location: Machakos University</p>
+      <p class="mb-2">Registered name: {{ ticket.name }}</p>
+      <p class="mb=2">Timestamp: {{ ticket.timestamp }}</p>
+      <p class="mb-2">Registration ID: {{ ticket.ref_code }}</p>
+    </div>
+    <!-- Note -->
+    <div class="note mt-5">
+      <p>A copy of this ticket has been sent to {{ ticket.email }}. Please check your inbox.</p>
+    </div>
+  </div>
+</body>
+</html>
