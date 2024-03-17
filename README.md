@@ -47,6 +47,7 @@ The Hackfest Ticket Generator is a Django web application that allows users to r
 - Submit the form to register for the Hackfest event.
 - After successful registration, you will receive a personalized ticket with a QR code.
 - Attend the Hackfest event and present your ticket at the registration desk.
+- Scan the code to find the registered user's information.
 
 ## Contributing
 
