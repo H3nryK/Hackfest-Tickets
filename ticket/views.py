@@ -26,7 +26,7 @@ def register(request):
         if created:
             return redirect(reverse('ticket', kwargs={'ticket_id': ticket.id}))
         else:
-            return redirect(reverse('ticket', kwargs={'ticket_id': ticket.id}))
+            return redirect(reverse('homepage'))
     
     return render(request, 'main.html')
 

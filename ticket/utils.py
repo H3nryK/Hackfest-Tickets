@@ -17,6 +17,6 @@ def generate_qr_code(ticket_id):
     # Generate QR code image
     img = qr.make_image(fill_color="black", back_color="white")
 
-    file_path = os.path.join('media', 'qrcodes', f'{ticket_id}.png')
+    file_path = os.path.join('media/', 'qrcodes', f'{ticket_id}.png')
 
     img.save(file_path)
