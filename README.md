@@ -28,17 +28,37 @@ The Hackfest Ticket Generator is a Django web application that allows users to r
    ```bash
    pip install django whitenoise pillow qrcode
 
-3. Run migrations to create the database:
+3. Ensure tho configure you email settings.
+
+   ```bash
+   # Settings.py
+
+   # Email settings
+   
+   (.... previous code...)
+   
+   EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+   EMAIL_HOST = 'smtp.gmail.com'
+   EMAIL_PORT = 587
+   EMAIL_HOST_USER = ''  # Your Gmail email address
+   EMAIL_HOST_PASSWORD = ''     # Your Gmail password or App password if        using 2-factor authentication
+   EMAIL_USE_TLS = True
+   EMAIL_USE_SSL = False
+
+   # Default email address to use for various automated correspondence from the site.
+   DEFAULT_FROM_EMAIL = ''  # Your Gmail email address
+
+4. Run migrations to create the database:
 
    ```bash
    python manage.py migrate
 
-4. Start the development server:
+5. Start the development server:
 
    ```bash
    python manage.py runserver
    
-5. Access the application in your web browser at http://localhost:8000/.
+6. Access the application in your web browser at http://localhost:8000/.
 
 ## Usage
 
