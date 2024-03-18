@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hackfest Ticket Details</title>
+    <style>
+        /* Basic ticket style */
+        .ticket {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid #333;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Details section */
+        .details {
+            margin-bottom: 20px;
+        }
+
+        /* QR Code section */
+        .qr-code {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Reference code */
+        .ref-code {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="ticket">
+        <div class="header">
+            <h2>Boarding Pass</h2>
+            <p>Thank you for registering!</p>
+        </div>
+        <div class="details">
+            <p><strong>Name:</strong> {{ name }}</p>
+            <p><strong>Email:</strong> {{ email }}</p>
+            <p><strong>Team:</strong> {{ team }}</p>
+            <p><strong>Course:</strong> {{ course }}</p>
+            <p><strong>School:</strong> {{ school }}</p>
+            <p><strong>Language:</strong> {{ language }}</p>
+            <p><strong>Year:</strong> {{ year }}</p>
+        </div>
+        <div class="qr-code">
+            <img src="{{ qr_code_url }}" alt="QR Code">
+        </div>
+        <div class="ref-code">
+            <p>Reference Code: {{ ref_code }}</p>
+        </div>
+    </div>
+</body>
+</html>
