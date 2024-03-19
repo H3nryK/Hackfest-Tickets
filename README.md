@@ -53,12 +53,19 @@ The Hackfest Ticket Generator is a Django web application that allows users to r
    ```bash
    python manage.py migrate
 
-5. Start the development server:
+5. Run collect static to configure staticfiles:
+
+   ```bash
+   python manage.py collectstatic
+
+- If prompted say yes.
+
+6. Start the development server:
 
    ```bash
    python manage.py runserver
    
-6. Access the application in your web browser at http://localhost:8000/.
+7. Access the application in your web browser at http://localhost:8000/.
 
 ## Usage
 
